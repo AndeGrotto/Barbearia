@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Jogo da memória</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" content="Anderson, Bruno, Doglas, Ezequiel" />
+    <meta name="description" content="Jogo da memória" />
+    <meta name="keywords" content="html5, css, javascript, jquery, memória" />
+
+    <!-- Estilos -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/animate.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="../Games/styles.css" />
+    <link rel="stylesheet" href="../css/estilo.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+<body>
+  <header id="cabecalho-principal">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="mx-auto navbar-centered">
+        <a class="navbar-brand mx-auto" href="#">
+          <img
+            src="../Imagens/logo-barbearia1.png"
+            alt=""
+            srcset=""
+            height="60px"
+          />
+        </a>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cadastre-se</a>
+            </li>
+            <li class="nav-item active">
+              <a class="nav-link" href="../Games/index.html">Jogo</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Sobre nós</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div id="control"> 
+    </div>
+    <section class="memory-game">
+      <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="img/um.jpg" alt="Aurelia" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="aurelia">
+        <img class="front-face" src="img/um.jpg" alt="Aurelia" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="img/dois.jpg" alt="Vue" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="vue">
+        <img class="front-face" src="img/dois.jpg" alt="Vue" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="img/três.jpg" alt="Angular" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="angular">
+        <img class="front-face" src="img/três.jpg" alt="Angular" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="img/seis.jpg" alt="Ember" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="ember">
+        <img class="front-face" src="img/seis.jpg" alt="Ember" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="img/sete.jpg" alt="Backbone" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="backbone">
+        <img class="front-face" src="img/sete.jpg" alt="Backbone" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+
+      <div class="memory-card" data-framework="react">
+        <img class="front-face" src="img/oito.jpg" alt="React" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+      <div class="memory-card" data-framework="react">
+        <img class="front-face" src="img/oito.jpg" alt="React" />
+        <img class="back-face" src="img/ca.png" alt="JS Badge" />
+      </div>
+    </section>
+
+    <script src="scripts.js"></script>
+  </header>
+</body>
+</html>
