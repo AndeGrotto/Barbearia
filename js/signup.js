@@ -27,9 +27,28 @@
                 alert("Cadastro realizado com sucesso");
                 this.submit();
               } else {
+                const detectarNavegador = () => {
+                  var sBrowser,
+                    sUsrAg = navigator.userAgent;
+
+                  if (sUsrAg.indexOf("Chrome") > -1) {
+                    sBrowser = "../assets/img/chrome.png";
+                  } else if (sUsrAg.indexOf("Safari") > -1) {
+                    sBrowser = "../assets/img/safar.png";
+                  } else if (sUsrAg.indexOf("Opera") > -1) {
+                    sBrowser = "../assets/img/opera.png";
+                  } else if (sUsrAg.indexOf("Firefox") > -1) {
+                    sBrowser = "../assets/img/firefox.png";
+                  } else if (sUsrAg.indexOf("MSIE") > -1) {
+                    sBrowser = "../assets/img/edge.png";
+                  }
+
+                  return sBrowser;
+                };
                 document.getElementById("mensagem").innerHTML = `
                 <div class="alert alert-danger" role="alert">
-                  O e-mail inserido não pertence à UPF
+                  <img src="${detectarNavegador()}" height="50px" />
+                  Você não tem um e-mail da UPF
                 </div>`;
               }
             }

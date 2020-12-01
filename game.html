@@ -26,7 +26,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/estilo.css" />
-
+    <link rel="stylesheet" href="css/game.css" />
   </head>
 
   <body>
@@ -70,43 +70,43 @@
       </nav>
     </header>
     <main>
-
-      <section id="team">
+      <section id="game">
         <div class="container">
-          <h3 class="main-title">Jogo da memória</h3>
-          <div class="row no-gutters">
-              <div class="member">
-                <section class="score-panel">
-                  <h3>Pontuação</h3>
-                  <ul id="star-rating" class="star-rating">
-                    <li class="star"><i class="fa fa-star"></i></li>
-                    <li class="star"><i class="fa fa-star"></i></li>
-                    <li class="star"><i class="fa fa-star"></i></li>
-                  </ul>
-                  <span class="moves-counter">0</span> Movimentações
-                  <div class="timer-container">
-                    <span class="timer"><i class="fa fa-hourglass-start"></i> Tempo: 00:00</span>
-                  </div>
-                  <div class="reset">
-                    <button class="btn reset-btn">Reiniciar <i class="fa fa-repeat"></i></button>
-                  </div>
-                </section>
-                <section class="win-game-modal">
-                  <div id="modal" class="modal">
-                    <div class="modal-content">
-                      <span class="close">&times;</span>
-                      <h2> Congratulações!</h2>
-                    </div>
-                  </div>
-                </section>
-          
-                <ul class="deck"></ul>
+          <header class="header">
+            <h1>Jogo da Mémoria</h1>
+          </header>
+
+          <section class="score-panel">
+            <h3>Pontuação</h3>
+            <ul id="star-rating" class="star-rating">
+              <li class="star"><i class="fa fa-star"></i></li>
+              <li class="star"><i class="fa fa-star"></i></li>
+              <li class="star"><i class="fa fa-star"></i></li>
+            </ul>
+            <span class="moves-counter">0</span> Movimentações
+            <div class="timer-container">
+              <span class="timer"
+                ><i class="fa fa-hourglass-start"></i> Tempo: 00:00</span
+              >
+            </div>
+            <div class="reset">
+              <button class="btn reset-btn">
+                Reiniciar <i class="fa fa-repeat"></i>
+              </button>
+            </div>
+          </section>
+          <section class="win-game-modal">
+            <div id="modal" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Congratulações!</h2>
               </div>
-          </div>
+            </div>
+          </section>
+
+          <ul class="deck"></ul>
         </div>
       </section>
-
-
     </main>
 
     <footer>
@@ -118,20 +118,16 @@
                 <span class="footer-title">Names</span>
               </li>
               <li class="nav-item">
-                <span class="nav-link"
-                >Anderson Grotto</span>
+                <span class="nav-link">Anderson Grotto</span>
               </li>
               <li class="nav-item">
-                <span class="nav-link"
-                >Bruno Casagrande</span>
+                <span class="nav-link">Bruno Casagrande</span>
               </li>
               <li class="nav-item">
-                <span class="nav-link"
-                >Doglas Oliveira Bogoni</span>
+                <span class="nav-link">Doglas Oliveira Bogoni</span>
               </li>
               <li class="nav-item">
-                <span class="nav-link"
-                >Ezequiel Fornari</span>
+                <span class="nav-link">Ezequiel Fornari</span>
               </li>
             </ul>
           </div>
@@ -214,7 +210,6 @@
       </div>
     </footer>
 
-
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
       integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -225,6 +220,6 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
-    <script src="js/custom.js"></script>
+    <script src="./js/game.js"></script>
   </body>
 </html>
