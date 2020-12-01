@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <title>Barbearia Los Carecas</title>
+    <title>Jogo da memória</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="author" content="Anderson, Bruno, Doglas, Ezequiel" />
@@ -25,8 +25,8 @@
       integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
       crossorigin="anonymous"
     />
-
     <link rel="stylesheet" href="css/estilo.css" />
+
   </head>
 
   <body>
@@ -47,7 +47,7 @@
         <div class="mx-auto navbar-centered">
           <a class="navbar-brand mx-auto" href="#">
             <img
-              src="./assets/images/logo-barbearia1.png"
+              src="./assets/img/logo-barbearia1.png"
               alt=""
               srcset=""
               height="60px"
@@ -70,73 +70,110 @@
       </nav>
     </header>
     <main>
-      <section>
+
+      <section id="team">
         <div class="container">
-          <h3 class="main-title">Game</h3>
+          <h3 class="main-title">Jogo da memória</h3>
+          <div class="row no-gutters">
+              <div class="member">
+                <section class="score-panel">
+                  <h3>Pontuação</h3>
+                  <ul id="star-rating" class="star-rating">
+                    <li class="star"><i class="fa fa-star"></i></li>
+                    <li class="star"><i class="fa fa-star"></i></li>
+                    <li class="star"><i class="fa fa-star"></i></li>
+                  </ul>
+                  <span class="moves-counter">0</span> Movimentações
+                  <div class="timer-container">
+                    <span class="timer"><i class="fa fa-hourglass-start"></i> Tempo: 00:00</span>
+                  </div>
+                  <div class="reset">
+                    <button class="btn reset-btn">Reiniciar <i class="fa fa-repeat"></i></button>
+                  </div>
+                </section>
+                <section class="win-game-modal">
+                  <div id="modal" class="modal">
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <h2> Congratulações!</h2>
+                    </div>
+                  </div>
+                </section>
+          
+                <ul class="deck"></ul>
+              </div>
+          </div>
         </div>
       </section>
+
+
     </main>
+
     <footer>
       <div class="container">
         <div class="row">
           <div class="col-md-4 footer-column">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <span class="footer-title">Product</span>
+                <span class="footer-title">Names</span>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Product 1</a>
+                <span class="nav-link"
+                >Anderson Grotto</span>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Product 2</a>
+                <span class="nav-link"
+                >Bruno Casagrande</span>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Plans & Prices</a>
+                <span class="nav-link"
+                >Doglas Oliveira Bogoni</span>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Frequently asked questions</a>
+                <span class="nav-link"
+                >Ezequiel Fornari</span>
               </li>
             </ul>
           </div>
           <div class="col-md-4 footer-column">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <span class="footer-title">Company</span>
+                <span class="footer-title">Page</span>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="index.html">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="signup.html">Cadastro</a>
+                <a class="nav-link" href="signup.html">Cadastre-se</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="game.html">Game</a>
+                <a class="nav-link" href="game.html">Jogo</a>
               </li>
             </ul>
           </div>
           <div class="col-md-4 footer-column">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <span class="footer-title">Contact & Support</span>
+                <span class="footer-title">Information about</span>
               </li>
               <li class="nav-item">
-                <span class="nav-link"
-                  ><i class="fas fa-phone"></i>+47 45 80 80 80</span
+                <a class="nav-link" href="index.html#team"
+                  ><i class="fas fa-users"></i>Nosso time</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"
-                  ><i class="fas fa-comments"></i>Live chat</a
+                <a class="nav-link" href="index.html#about"
+                  ><i class="fas fa-address-card"></i>Sobre nós</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"
-                  ><i class="fas fa-envelope"></i>Contact us</a
+                <a class="nav-link" href="index.html#game"
+                  ><i class="fas fa-gamepad"></i>Jogo</a
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#"
-                  ><i class="fas fa-star"></i>Give feedback</a
+                <a class="nav-link" href="index.html#hiring"
+                  ><i class="fas fa-user-plus"></i>Contratação</a
                 >
               </li>
             </ul>
@@ -157,35 +194,26 @@
           <div class="col-md-4 box">
             <ul class="list-inline social-buttons">
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://mobile.twitter.com/" target="_blank">
                   <i class="fab fa-twitter"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.facebook.com/" target="_blank">
                   <i class="fab fa-facebook-f"></i>
                 </a>
               </li>
               <li class="list-inline-item">
-                <a href="#">
+                <a href="https://www.linkedin.com/" target="_blank">
                   <i class="fab fa-linkedin-in"></i>
                 </a>
-              </li>
-            </ul>
-          </div>
-          <div class="col-md-4 box">
-            <ul class="list-inline quick-links">
-              <li class="list-inline-item">
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Terms of Use</a>
               </li>
             </ul>
           </div>
         </div>
       </div>
     </footer>
+
 
     <script
       src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -197,5 +225,6 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+    <script src="js/custom.js"></script>
   </body>
 </html>
