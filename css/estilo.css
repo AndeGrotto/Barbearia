@@ -21,9 +21,13 @@ h6 {
   font-family: "Roboto Slab", serif;
 }
 
+section {
+  margin: 64px 0px;
+}
+
 #cabecalho-principal {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
-    url(../Imagens/barbearia.jpg);
+    url(../assets/images/barbearia.jpg);
   height: 1000px;
   background-position: center;
   background-size: cover;
@@ -265,12 +269,12 @@ h6 {
   text-align: center;
 }
 #local-img {
-  background-image: url(../Imagens/local.jpeg);
+  background-image: url(../assets/images/local.jpeg);
   background-size: cover;
   height: 500px;
 }
 #pattern-img {
-  background-image: url(../Imagens/pattern.png);
+  background-image: url(../assets/images/pattern.png);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -289,19 +293,20 @@ h6 {
   text-align: center;
 }
 #tesoura-img {
-  background-image: url(../Imagens/local1.jpg);
+  background-image: url(../assets/images/local1.jpg);
   background-size: cover;
   height: 500px;
 }
 #geometrica-img {
-  background-image: url(../Imagens/cropped.jpg);
+  background-image: url(../assets/images/cropped.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
 .ident-area-two {
   margin-top: 20%;
 }
-.ident-area-two h4, h6 {
+.ident-area-two h4,
+h6 {
   text-transform: uppercase;
   margin-bottom: 3%;
 }
@@ -442,7 +447,6 @@ footer .quick-links {
   color: #f9a926;
 }
 
-
 /* Game */
 .team-area {
   margin: 64px 0px;
@@ -495,5 +499,5 @@ footer .quick-links {
 }
 .ident-game {
   line-height: 150%;
-  padding-left: 10px
+  padding-left: 10px;
 }
