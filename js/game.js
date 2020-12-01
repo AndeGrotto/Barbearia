@@ -1,6 +1,7 @@
 var selecionados = [];
 var tentativas = 0;
 var acertos = 0;
+var blockClick = false;
 
 function gerarContaAleatoria() {
   function gerarNumeroAleatorio() {
@@ -29,14 +30,24 @@ function gerarTabuleiro() {
 }
 
 function virarCarta(e) {
-  selecionados.push(this.getAttribute("data-cardid"));
+  if (blockClick) return;
+  if (selecionados.length === 1 && selecionados[0] === this) return;
+  selecionados.push(this);
   this.classList.add("virada");
 
   if (selecionados.length === 2) {
-    if (eval(selecionados[0]) === eval(selecionados[1])) {
+    blockClick = true;
+    if (
+      eval(selecionados[0].getAttribute("data-cardid")) ===
+      eval(selecionados[1].getAttribute("data-cardid"))
+    ) {
       acertos++;
       tentativas++;
       selecionados = [];
+
+      if (acertos == 6) {
+        alert("ganhou");
+      }
     } else {
       tentativas++;
       selecionados = [];
@@ -46,6 +57,7 @@ function virarCarta(e) {
         viradaPraCima.forEach((element) => {
           element.classList.remove("virada");
         });
+        blockClick = false;
       }, 2000);
     }
   }
@@ -53,6 +65,8 @@ function virarCarta(e) {
 
 function imprimirTabuleiro(tabuleiro) {
   const tabuleiroMontado = document.getElementById("tabuleiro");
+  tabuleiroMontado.innerHTML = "";
+
   tabuleiro.forEach((element, index) => {
     const carta = document.createElement("div");
     carta.innerHTML = `
@@ -63,8 +77,15 @@ function imprimirTabuleiro(tabuleiro) {
       "data-cardid",
       (index + 1) % 2 === 0 ? index - 1 : index
     );
+    carta.classList = ["peca"];
     carta.onclick = virarCarta;
     tabuleiroMontado.appendChild(carta);
+
+    let list = document.querySelector("#tabuleiro"),
+      i;
+    for (i = list.children.length; i >= 0; i--) {
+      list.appendChild(list.children[(Math.random() * i) | 0]);
+    }
   });
 }
 

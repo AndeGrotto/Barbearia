@@ -7,6 +7,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 #tabuleiro {
@@ -14,10 +15,6 @@ main {
   grid-template-columns: repeat(4, 100px);
   grid-template-rows: repeat(4, 100px);
   gap: 8px;
-}
-
-.peca {
-  overflow: hidden;
 }
 
 .frente,
