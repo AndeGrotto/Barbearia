@@ -22,9 +22,6 @@
                 "cadastro",
                 JSON.stringify({ nome, email, telefone, data })
               );
-              function funcao1() {
-                alert("Enviado com Sucesso!!!");
-              }
             }
           },
           false
@@ -33,4 +30,4 @@
     },
     false
   );
-});
+})();
