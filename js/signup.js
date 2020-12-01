@@ -31,16 +31,16 @@
                   var sBrowser,
                     sUsrAg = navigator.userAgent;
 
-                  if (sUsrAg.indexOf("Chrome") > -1) {
-                    sBrowser = "../assets/img/chrome.png";
+                  if (sUsrAg.indexOf("MSIE") > -1) {
+                      sBrowser = "assets/img/edge.png";
+                  }else if (sUsrAg.indexOf("Chrome") > -1) {
+                    sBrowser = "assets/img/chrome.png";
                   } else if (sUsrAg.indexOf("Safari") > -1) {
-                    sBrowser = "../assets/img/safar.png";
+                    sBrowser = "assets/img/safar.png";
                   } else if (sUsrAg.indexOf("Opera") > -1) {
-                    sBrowser = "../assets/img/opera.png";
+                    sBrowser = "assets/img/opera.png";
                   } else if (sUsrAg.indexOf("Firefox") > -1) {
-                    sBrowser = "../assets/img/firefox.png";
-                  } else if (sUsrAg.indexOf("MSIE") > -1) {
-                    sBrowser = "../assets/img/edge.png";
+                    sBrowser = "assets/img/firefox.png";
                   }
 
                   return sBrowser;
