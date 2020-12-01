@@ -2,6 +2,7 @@ var selecionados = [];
 var tentativas = 0;
 var acertos = 0;
 var blockClick = false;
+var tempo = 0;
 
 function gerarContaAleatoria() {
   function gerarNumeroAleatorio() {
@@ -29,6 +30,23 @@ function gerarTabuleiro() {
   return contas;
 }
 
+function ganhar() {
+  document.getElementById("estatisticas").innerHTML = `
+    <div class="alert alert-success" role="alert">
+      <h4 class="alert-heading">Você ganhou!</h4>
+      <p><b>Tentativas</b>: ${tentativas}</p>
+      <p><b>Tempo decorrido</b>: ${tempo}</p>
+    </div>
+  `;
+  document.getElementById("tabuleiro").innerHTML = ``;
+
+  selecionados = [];
+  tentativas = 0;
+  acertos = 0;
+  blockClick = false;
+  timer = null;
+}
+
 function virarCarta(e) {
   if (blockClick) return;
   if (selecionados.length === 1 && selecionados[0] === this) return;
@@ -46,17 +64,16 @@ function virarCarta(e) {
       selecionados = [];
 
       if (acertos == 6) {
-        alert("ganhou");
+        ganhar();
       }
+      blockClick = false;
     } else {
-      tentativas++;
-      selecionados = [];
       setTimeout(() => {
-        const viradaPraCima = document.querySelectorAll(".virada");
-
-        viradaPraCima.forEach((element) => {
+        selecionados.forEach((element) => {
           element.classList.remove("virada");
         });
+        tentativas++;
+        selecionados = [];
         blockClick = false;
       }, 2000);
     }
@@ -66,6 +83,11 @@ function virarCarta(e) {
 function imprimirTabuleiro(tabuleiro) {
   const tabuleiroMontado = document.getElementById("tabuleiro");
   tabuleiroMontado.innerHTML = "";
+  document.getElementById("estatisticas").innerHTML = ``;
+
+  window.setInterval(() => {
+    tempo += 1;
+  }, 1000);
 
   tabuleiro.forEach((element, index) => {
     const carta = document.createElement("div");
@@ -80,7 +102,6 @@ function imprimirTabuleiro(tabuleiro) {
     carta.classList = ["peca"];
     carta.onclick = virarCarta;
     tabuleiroMontado.appendChild(carta);
-
     let list = document.querySelector("#tabuleiro"),
       i;
     for (i = list.children.length; i >= 0; i--) {
