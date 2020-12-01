@@ -140,13 +140,30 @@ window.onload = function() {
         return o; 
     }  
 
-    const areas = [ourteam, game, description, aboutus];
+    const areason = [ourteam, game, description, aboutus];
 
     let content = "";
 
-    shuffle(areas).forEach(item => { return content = content + item});
+    shuffle(areason).forEach(item => { return content = content + item});
 
     document.querySelector("main").innerHTML = content;
 }
 
 
+var num = 2;
+var img = document.getElementById("teste");
+function trocaImg(){
+//apenas para cunho de testes
+setTimeout(function () {
+  if (num == 1)
+    {
+      img.src = "http://db13.in/wp-content/uploads/2016/07/2000px-Dialog-error-round.svg_.png";
+    }
+  else if (num == 2)
+    {
+      img.src = "https://t3.ftcdn.net/jpg/01/45/20/02/160_F_145200260_Mlts2v0PtYabB4v5dz1I8hKNCfieJidW.jpg";
+    }
+    //garante que num fique alternando entre 1 e 2
+    num = (num % 2) + 1;
+    }, 1000);
+}

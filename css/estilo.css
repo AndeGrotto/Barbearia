@@ -337,11 +337,12 @@ footer {
 
 .footer-column {
   text-align: center;
+  cursor: context-menu;
 }
 .footer-column .nav-item .nav-link {
   padding: 4px 0;
 }
-.footer-column .nav-item span.nav-link {
+.footer-column .nav-item span.nav-link:hover {
   color: #6c757d;
 }
 .footer-column .nav-item span.footer-title {
