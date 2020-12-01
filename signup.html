@@ -73,6 +73,76 @@
       <section>
         <div class="container">
           <h3 class="main-title">Cadastro</h3>
+
+          <form class="needs-validation" novalidate>
+            <div class="form-row">
+              <div class="col-md-12">
+                <label for="validationCustom01">Nome</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom01"
+                  placeholder="Seu nome completo"
+                  required
+                />
+                <div class="invalid-feedback"></div>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12">
+                <label for="validationCustom01">E-mail</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="validationCustom01"
+                  placeholder="Seu e-mail"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12">
+                <label for="validationCustom01">Telefone</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="validationCustom01"
+                  placeholder="(00) 9 0000 0000"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="col-md-12">
+                <label for="validationCustom01">Data de nascimento</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  id="validationCustom01"
+                  value="Mark"
+                  required
+                />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  value=""
+                  id="invalidCheck"
+                  required
+                />
+                <label class="form-check-label" for="invalidCheck">
+                  Aceito com os termos e condições
+                </label>
+                <div class="invalid-feedback">
+                  Você deve aceitar os termos para se cadastrar
+                </div>
+              </div>
+            </div>
+            <button class="btn btn-primary" type="submit">Cadastrar</button>
+          </form>
         </div>
       </section>
     </main>
@@ -197,5 +267,7 @@
       integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./js/signup.js"></script>
   </body>
 </html>
